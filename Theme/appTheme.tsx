@@ -32,5 +32,10 @@ export const styles = StyleSheet.create({
     width:150,
     height:300,
     resizeMode:'contain'
+  },
+  btnmi:{
+    backgroundColor:'#b0b0b0',
+    justifyContent:'center',
+    borderRadius:16
   }
 })

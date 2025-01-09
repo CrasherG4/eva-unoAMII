@@ -1,4 +1,4 @@
-import { Button, Image, Modal, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { styles } from '../Theme/appTheme'
 import { DataSnapshot } from 'firebase/database'
@@ -26,6 +26,9 @@ export default function Tarjeta({datos}:TarjetaProps) {
         <Text>{datos.titulo}</Text> 
         <Text>{datos.descripcion}</Text> 
       </View>
+      <TouchableOpacity onPress={()=>setVisible(true)} style={styles.btnmi}>
+        <Text style={styles.h1}>Más información...</Text>
+      </TouchableOpacity>
       <Modal visible={visible}>
         <View style={styles.modal}>
           <Text style={{...styles.txtNombre, color:'#000000'}}>{datos.titulo}</Text>
