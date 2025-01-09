@@ -4,9 +4,20 @@ import { FlatList } from 'react-native-gesture-handler';
 import { styles } from '../Theme/appTheme';
 import Tarjeta from '../components/Tarjeta';
 
+type Videojuego = { 
+  titulo: string, 
+  plataforma: string[], 
+  genero: string[], 
+  desarrollador: string, 
+  precio: number, 
+  lanzamiento: string, 
+  descripcion: string, 
+  imagen: string 
+}
+
 export default function Screen4() {
 
-  const [datos, setDatos] = useState()
+  const [datos, setDatos] = useState<Videojuego[]>([])
 
   useEffect(() => {
     async function leer(){
