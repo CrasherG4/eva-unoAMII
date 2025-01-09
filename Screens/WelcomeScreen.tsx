@@ -5,7 +5,8 @@ import { styles } from '../Theme/appTheme'
 export default function WelcomeScreen({navigation}:any) {
   return (
     <ImageBackground source={require('../assets/img/BGRegister.png')} style={styles.contenedorAll}>
-      <Text>¡Bienvenido!</Text>
+      <Text style={styles.h1}>¡Bienvenido!</Text>
+      <Text style={styles.h1}>Gabriel Olmedo</Text>
       <TouchableOpacity onPress={()=>navigation.navigate('BottomNav')}>
         <Text>Iniciar</Text>
       </TouchableOpacity>
